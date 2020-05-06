@@ -11,6 +11,7 @@ import org.bukkit.inventory.meta.SkullMeta;
 import com.mojang.authlib.GameProfile;
 import com.mojang.authlib.properties.Property;
 
+@SuppressWarnings("unused")
 public class Base64Skull {
 //	public static ItemStack getSkull(String base64) {
 //		ItemStack item = new ItemStack(Material.PLAYER_HEAD);

@@ -24,6 +24,7 @@ import org.bukkit.material.MaterialData;
 
 import me.TheTealViper.foodlol.FoodLol;
 
+@SuppressWarnings("deprecation")
 public class ItemCreator implements Listener{
 	private static List<Material> durMats = new ArrayList<Material>();
 	public static Map<ItemStack, Integer> damageInfo = new HashMap<ItemStack, Integer>();
@@ -151,6 +152,7 @@ public class ItemCreator implements Listener{
 	public void onPickup(PlayerPickupItemEvent e){
 		Player p = e.getPlayer();
 		ItemStack forceStack = null;
+		@SuppressWarnings("unused")
 		ItemStack keyItem = null;
 		for(ItemStack i : forceStackInfo.keySet()){
 			if(e.getItem().getItemStack().isSimilar(i)){
@@ -211,6 +213,7 @@ public class ItemCreator implements Listener{
     	durMats.add(Material.BOW);
 	}
 	
+	@SuppressWarnings("unused")
 	private boolean isSimilar(ItemStack item1, ItemStack item2) {
         if (item2.getType() == item1.getType() && item2.getDurability() == item1.getDurability()) {
             ItemMeta item1Meta = item1.getItemMeta();

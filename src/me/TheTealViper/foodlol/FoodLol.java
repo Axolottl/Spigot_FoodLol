@@ -118,6 +118,7 @@ public class FoodLol extends JavaPlugin implements Listener{
 			e.setCancelled(true);
 	}
 	
+	@SuppressWarnings("deprecation")
 	private boolean onRightClick(Player p){
 		ItemStack hand = p.getInventory().getItemInMainHand();
 		boolean found = false;
@@ -225,6 +226,7 @@ public class FoodLol extends JavaPlugin implements Listener{
 		return true;
 	}
 	
+	@SuppressWarnings("deprecation")
 	@EventHandler
 	public void onDamage(EntityDamageByEntityEvent e){
 		if(e.getDamager() instanceof Player){
@@ -240,6 +242,7 @@ public class FoodLol extends JavaPlugin implements Listener{
 		}
 	}
 	
+	@SuppressWarnings("deprecation")
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args){
 		boolean handleCommand = false;
 		if(sender instanceof Player && sender.hasPermission("foodlol.use"))
@@ -292,6 +295,7 @@ public class FoodLol extends JavaPlugin implements Listener{
 							ItemStack item = foodInfo.get(foodID);
 							//
 							ItemStack forceStack = null;
+							@SuppressWarnings("unused")
 							ItemStack keyItem = null;
 							for(ItemStack i : ItemCreator.forceStackInfo.keySet()){
 								if(item.isSimilar(i)){
